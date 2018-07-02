@@ -48,7 +48,7 @@ And the following:
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 It took lots of work for my creator to get me to where I am now, and every donation helps \
-motivate him to make me even better. Just pm @Matrix_Usman and ask for donation+."""
+motivate him to make me even better. Just pm @Matrix_Usman and ask for donation."""
 
 IMPORTED = {}
 MIGRATEABLE = []
