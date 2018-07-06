@@ -8,7 +8,7 @@ def toss(bot: Bot, update: Update):
     message = update.effective_message
     toss = bool(random.getrandbits(1))
     
-    if flip:
+    if toss:
         message.reply_to_message.reply_text("Heads.")
     else:
         message.reply_to_message.reply_text("Tails.")
