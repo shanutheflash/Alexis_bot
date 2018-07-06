@@ -320,6 +320,14 @@ def echo(bot: Bot, update: Update):
     else:
         message.reply_text(args[1], quote=False)
     message.delete()
+    
+def golu(bot: Bot, update: Update):
+    reply_msg = "Yas, its my owner!"
+    message = update.effective_message
+    if message.reply_to_message:
+        message.reply_to_message.reply_text(reply_msg)
+    else:
+        message.reply_text(reply_msg, quote=False)
 
 
 MARKDOWN_HELP = """
@@ -380,6 +388,7 @@ TIME_HANDLER = CommandHandler("time", get_time, pass_args=True)
 RUNS_HANDLER = DisableAbleCommandHandler("runs", runs)
 SLAP_HANDLER = DisableAbleCommandHandler("slap", slap, pass_args=True)
 INFO_HANDLER = DisableAbleCommandHandler("info", info, pass_args=True)
+GOLU_HANDLER = DisableAbleCommandHandler("golu", info, pass_args=True)
 
 ECHO_HANDLER = CommandHandler("echo", echo, filters=CustomFilters.sudo_filter)
 MD_HELP_HANDLER = CommandHandler("markdownhelp", markdown_help, filters=Filters.private)
@@ -394,3 +403,4 @@ dispatcher.add_handler(INFO_HANDLER)
 dispatcher.add_handler(ECHO_HANDLER)
 dispatcher.add_handler(MD_HELP_HANDLER)
 dispatcher.add_handler(STATS_HANDLER)
+dispatcher.add_handler(GOLU_HANDLER)
