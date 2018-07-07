@@ -322,7 +322,7 @@ def echo(bot: Bot, update: Update):
     message.delete()
     
 def golu(bot: Bot, update: Update):
-    reply_msg = "Yas, its my owner!"
+    reply_msg = "Yas, He is my owner!"
     message = update.effective_message
     if message.reply_to_message:
         message.reply_to_message.reply_text(reply_msg)
